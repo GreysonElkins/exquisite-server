@@ -21,6 +21,8 @@ This was a Mod 3 project in Turing School of Software and Design's Front End Eng
 The biggest learning goal of this project was to research and implement a completely new technology. For our project, we decided to build a back end and a homespun API using PostgresQL, Knex, and Express. this back end keeps track of all of our user's data, all of the stories and writing prompts. 
 
 ## Setup/Installation
+### To run this server locally: 
+
 - Clone down this repo and cd into this directory
 - Run `npm install` in the root of the newly created directory to install the necessary dependencies
 - If you haven't already, install [PostgreSQL](https://www.postgresql.org/download/) on your computer 
@@ -33,6 +35,28 @@ The biggest learning goal of this project was to research and implement a comple
 - Run `knex migrate:latest`
 - Run `knex seed:run`
 - Run `npm start`
+
+### To access it online: 
+#### GET:
+- `https://exquisite-server.herokuapp.com/api/v2/authors/` - returns an array of all authors
+- `https://exquisite-server.herokuapp.com/api/v2/authors/:id` - returns the author with the provided id
+- `https://exquisite-server.herokuapp.com/api/v2/prompts` - returns an array of all prompts
+- `https://exquisite-server.herokuapp.com/api/v2/prompts/:id` - returns the prompt with the  provided id
+- `https://exquisite-server.herokuapp.com/api/v2/prompts/:detail` - if detail is `any` it will respond with a random prompt of any genre. Random prompts from specific genres can also be fetched by specifying `detail` as the desired genre. 
+- `https://exquisite-server.herokuapp.com/api/v2/stories` - returns an array of all stories
+- `https://exquisite-server.herokuapp.com/api/v2/stories/:id` - returns the specific story with the provided id
+#### POST:
+- `https://exquisite-server.herokuapp.com/api/v2/authors`- creates a new Author in the data-base. Requires a body-object with `name`, `email`, and `password` key value pairs. Responds with the new user object and it's id. (Users and authors are interchangable)
+- `https://exquisite-server.herokuapp.com/api/v2/authors/login` - respods with the user object if the credentials provided are correct. Requires a body with `username` and `password` key value pairs, `username` can be an email or a user name, both are currently case-sensitive.
+- `https://exquisite-server.herokuapp.com/api/v2/authors/stories` - requires a request body with the following key value pairs: `[title, contributions, prompt, contributors]`. `Contributors` and `prompt` should be the id of their corresponding user or prompt. The rest are strings. The server will respond with and create a new story. 
+#### PATCH:
+- `https://exquisite-server.herokuapp.com/api/v2/authors/:id` - requires a request body with at least one of the following key value pairs `[email, password, bio]` and will change the corresponding values for the author with the id provided. 
+- `https://exquisite-server.herokuapp.com/api/v2/authors/stories/:id` - requires a request body with `contributions` and `contributors`, a string and a number respectively. Also accepts `is_complete` as a boolean. Will update the story corresponding with the id provided in the endpoint, and will respond with the updated story. 
+
+
+
+
+
 
 ## Contributors
 V1 of this project was submitted on 9/15/2020 by [Aaron Burris-DeBoskey](https://github.com/Abdeboskey), [Carly Clift](https://github.com/carlymclift), [Greyson Elkins](https://github.com/GreysonElkins), and [Nick Hart](https://github.com/nickhartdev) and is visible at [Exquisite Sever V1](https://github.com/nickhartdev/exquisite-corpse-server), it was tweaked from the ground up for deployment here, and this is the current version.
