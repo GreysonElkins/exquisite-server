@@ -32,6 +32,9 @@ The biggest learning goal of this project was to research and implement a comple
   DB_USER=postgres
   DB_PASSWORD=examplePassword
 ```
+- In the terminal, run `psql -U postgres`, enter your password when prompted
+- Create a new data base with the line `CREATE DATABASE exquisite`
+- Close out of psql
 - Run `knex migrate:latest`
 - Run `knex seed:run`
 - Run `npm start`
