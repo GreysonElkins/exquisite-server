@@ -35,4 +35,4 @@ The biggest learning goal of this project was to research and implement a comple
 - Run `npm start`
 
 ## Contributors
-This project was submitted on 9/15/2020 by [Aaron Burris-DeBoskey](https://github.com/Abdeboskey), [Carly Clift](https://github.com/carlymclift), [Greyson Elkins](https://github.com/GreysonElkins), and [Nick Hart](https://github.com/nickhartdev)
+V1 of this project was submitted on 9/15/2020 by [Aaron Burris-DeBoskey](https://github.com/Abdeboskey), [Carly Clift](https://github.com/carlymclift), [Greyson Elkins](https://github.com/GreysonElkins), and [Nick Hart](https://github.com/nickhartdev) and is visible at [Exquisite Sever V1](https://github.com/nickhartdev/exquisite-corpse-server), it was tweaked from the ground up for deployment here, and this is the current version.
