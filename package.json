@@ -15,12 +15,11 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "knex": "^0.21.5",
-    "pg": "^7.18.2"
-  },
-  "devDependencies": {
+    "knex": "^0.21.1",
+    "pg": "^8.0.3",
     "@babel/node": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.5"
-  }
+  },
+  "devDependencies": {}
 }
